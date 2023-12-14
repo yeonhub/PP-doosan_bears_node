@@ -7,6 +7,8 @@ import dataList from '../assets/api/DoosanData';
 import { ysh53, yej25, kjh52, kdh37, jsb31, hkm13, csh51 } from '../assets/api/DoosanStatData'
 
 const Main = () => {
+
+    // CCP 및 SOLID 적용해볼 것
     const [listData, setListData] = useState(dataList)
     const [content, setContent] = useState('DoosanProfile')
     const [statData, setStatData] = useState(ysh53)

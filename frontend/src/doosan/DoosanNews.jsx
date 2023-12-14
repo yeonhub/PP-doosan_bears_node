@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const DoosanNews = ({ data }) => {
+
+    // SOLID 원칙 고려해 볼 것
     const { no, name } = data;
     const [newsItems, setNewsItems] = useState([]);
 

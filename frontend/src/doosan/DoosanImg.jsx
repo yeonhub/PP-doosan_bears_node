@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 const DoosanImg = ({ data }) => {
+
+    // 컴포넌트 분리 예상
     const { images } = data;
     const [big, setBig] = useState(images[0].tn)
 
