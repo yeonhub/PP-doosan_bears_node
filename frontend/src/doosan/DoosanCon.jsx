@@ -1,17 +1,18 @@
 import React from 'react';
-import DoosanProfile from './DoosanProfile';
-import DoosanStat from './DoosanStat';
-import DoosanClub from './DoosanClub';
-import DoosanNews from './DoosanNews';
-import DoosanYoutube from './DoosanYoutube';
+// import DoosanProfile from './DoosanProfile';
+// import DoosanStat from './DoosanStat';
+// import DoosanClub from './DoosanClub';
+// import DoosanNews from './DoosanNews';
+// import DoosanYoutube from './DoosanYoutube';
+import DoosanComponentMap from '../assets/api/DoosanComponentMap'
 
 // 컴포넌트 호출 방법 고려해 볼 것
-const componentMap = {
-    DoosanProfile, DoosanStat, DoosanClub, DoosanNews, DoosanYoutube
-};
+// const componentMap = {
+//     DoosanProfile, DoosanStat, DoosanClub, DoosanNews, DoosanYoutube
+// };
 
 const DoosanCon = ({ data, statData, content }) => {
-    const Component = componentMap[content] || null;
+    const Component = DoosanComponentMap.componentMap[content] || null;
 
     return (
         <div className='con'>
