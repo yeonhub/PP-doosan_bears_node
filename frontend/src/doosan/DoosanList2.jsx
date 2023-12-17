@@ -13,8 +13,4 @@ const DoosanList = ({ listData, onSelect }) => {
     );
 };
 
-const DoosanImg = () => {
-
-}
-
 export default DoosanList;

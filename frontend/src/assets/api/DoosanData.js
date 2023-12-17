@@ -13,6 +13,7 @@ export default [
         phy: '185cm | 90kg | AB형',
         po: '1루수',
         pro: '2014년 2차 3라운드 (전체 28번, LG)',
+        kboId : '64153',
         images: [
             { tn: "./images/ysh53/ysh53-1.jpg" },
             { tn: "./images/ysh53/ysh53-2.jpg" },
@@ -43,6 +44,7 @@ export default [
         phy: '180cm | 94kg | A형',
         po: '포수, 지명타자, 1루수',
         pro: '2006년 2차 8라운드 (전체 59번, 두산)',
+        kboId : '76232',
         images: [
             { tn: "./images/yej25/yej25-1.jpg" },
             { tn: "./images/yej25/yej25-2.jpg" },
@@ -74,6 +76,7 @@ export default [
         phy: '181cm | 75kg | B형',
         po: '유격수',
         pro: '2004년 1차 지명 (두산)',
+        kboId : '74206',
         images: [
             { tn: "./images/kjh52/kjh52-1.jpg" },
             { tn: "./images/kjh52/kjh52-2.jpg" },
@@ -103,6 +106,7 @@ export default [
         phy: '183cm | 83kg | 270mm | B형',
         po: '외야수',
         pro: '2019년 1차 지명 (두산)',
+        kboId : '69238',
         images: [
             { tn: "./images/kdh37/kdh37-1.jpg" },
             { tn: "./images/kdh37/kdh37-2.jpg" },
@@ -131,6 +135,7 @@ export default [
         phy: '175cm | 70kg | O형',
         po: '중견수',
         pro: '2009년 2차 5라운드 (전체 39번, 두산)',
+        kboId : '79231',
         images: [
             { tn: "./images/jsb31/jsb31-1.jpg" },
             { tn: "./images/jsb31/jsb31-2.jpg" },
@@ -160,6 +165,7 @@ export default [
         phy: '176cm | 84kg | A형',
         po: '3루수, 유격수, 2루수',
         pro: '2009년 2차 1라운드 (전체 7번, 두산)',
+        kboId : '79240',
         images: [
             { tn: "./images/hkm13/hkm13-1.jpg" },
             { tn: "./images/hkm13/hkm13-2.jpg" },
@@ -189,6 +195,7 @@ export default [
         phy: '179cm | 75kg | A형',
         po: '외야수',
         pro: '2016년 2차 1라운드 (전체 5번, 두산)',
+        kboId : '66209',
         images: [
             { tn: "./images/csh51/csh51-1.jpg" },
             { tn: "./images/csh51/csh51-2.jpg" },

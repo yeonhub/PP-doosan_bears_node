@@ -5,7 +5,6 @@ import DoosanList from './DoosanList';
 import DoosanInfo from './DoosanInfo';
 import dataList from '../assets/api/DoosanData';
 import { ysh53, yej25, kjh52, kdh37, jsb31, hkm13, csh51 } from '../assets/api/DoosanStatData'
-import { Header } from './Header';
 
 const Main = () => {
 
@@ -20,20 +19,23 @@ const Main = () => {
         setData(dataList[idx])
         setStatData(statDataMap[noname]);
     };
-    const onMenu = (menu) => {
+    const onMenu = (menu)=>{
         setContent(menu)
     }
     return (
-        <>
-            <Header>
-                <Header.Logo />
-                <DoosanInfo>
-
-                </DoosanInfo>
-                {/* <DoosanList listData={listData} onSelect={onSelect} />
-                <DoosanInfo data={data} statData={statData} onMenu={onMenu} content={content} /> */}
-            </Header>
-        </>
+        <div>
+            <div id='wrap'>
+                <div id='content'>
+                    <div className='inner'>
+                        <div className='img'>
+                            <img className='logo' src='./images/doosanlogo.png' alt='' />
+                        </div>
+                        <DoosanList listData={listData} onSelect={onSelect} />
+                        <DoosanInfo data={data} statData={statData} onMenu={onMenu} content={content}/>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 };
 

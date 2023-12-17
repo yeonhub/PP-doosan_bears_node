@@ -3,9 +3,9 @@ import Main from './doosan/Main'
 
 const App = () => {
   return (
-    <div>
+    <>
       <Main/>
-    </div>
+    </>
   );
 };
 

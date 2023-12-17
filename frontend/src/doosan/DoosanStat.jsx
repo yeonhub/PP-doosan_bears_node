@@ -12,7 +12,7 @@ const DoosanStat = ({ statData, data }) => {
         </tr>
         <tr className='kbologo'>
           <th colSpan={12}>
-            <a href="https://www.koreabaseball.com/Record/Player/HitterBasic/Basic1.aspx">
+            <a href={`https://www.koreabaseball.com/Record/Player/HitterDetail/Basic.aspx?playerId=${data.kboId}`}>
               <img src="./images/kbologo.png" alt="kbologo" />
             </a>
           </th>
