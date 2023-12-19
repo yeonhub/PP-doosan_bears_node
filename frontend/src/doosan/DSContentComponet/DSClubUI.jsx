@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { HeaderContext } from '../Header';
 
-const DoosanClub = ({ data }) => {
-    const { no, name, club } = data
+const DSClubUI = () => {
+    const { currentPlayer } = useContext(HeaderContext);
+    const { no, name, club } = currentPlayer
     return (
         <table className='tb club'>
             <caption></caption>
@@ -34,4 +36,4 @@ const DoosanClub = ({ data }) => {
     );
 };
 
-export default DoosanClub;
+export default DSClubUI;

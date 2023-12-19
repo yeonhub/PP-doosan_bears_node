@@ -1,21 +1,23 @@
+// Header.jsx
 import React, { createContext, useState } from 'react';
-import { DoosanPlayerData, statDataMap } from '../assets/api/DoosanData';
-
+import { DSPlayerData } from '../assets/api/DSPlayerData'
+import { ysh53, yej25, kjh52, kdh37, jsb31, hkm13, csh51 } from '../assets/api/DSStatsData'
 const HeaderContext = createContext();
 
-const Header = ({ children }) => {
-    const [selectedPlayer, setselectedPlayer] = useState('ysh53');
-    const [selectedPlayerData, setselectedPlayerData] = useState(DoosanPlayerData[0]);
 
-    const onSelect = (no, noname) => {
-        console.log(no);
-        const idx = DoosanPlayerData.findIndex(item => item.no === no);
-        setselectedPlayerData(DoosanPlayerData[idx]);
-        setselectedPlayer(statDataMap[noname]);
+const Header = ({ children }) => {
+    const [currentPlayer, setCurrentPlayer] = useState(DSPlayerData[0]);
+    const [currentPlayerStats, setCurrentPlayerStats] = useState(ysh53);
+    const statDataMap = { ysh53, yej25, kjh52, kdh37, jsb31, hkm13, csh51 };
+
+    const selectPlayer = (nameno) => {
+        const updatedPlayer = DSPlayerData.find(data => data.nameno === nameno);
+        setCurrentPlayer(updatedPlayer);
+        setCurrentPlayerStats(statDataMap[nameno])
     };
 
     return (
-        <HeaderContext.Provider value={{onSelect, selectedPlayerData}}>
+        <HeaderContext.Provider value={{ selectPlayer, currentPlayer, currentPlayerStats }}>
             <div id='wrap'>
                 <div id='content'>
                     <div className='inner'>

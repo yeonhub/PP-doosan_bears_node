@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { HeaderContext } from '../Header';
 import YouTube from 'react-youtube';
 
-const DoosanYoutube = ({ data }) => {
-    const { no, name, youtube } = data
+const DSYoutubeUI = () => {
+    const { currentPlayer } = useContext(HeaderContext);
+    const { no, name, youtube } = currentPlayer
     return (
         <div className='youtube'>
             <p className='noth'>두산베어스 NO.{no}</p>
@@ -32,4 +34,4 @@ const DoosanYoutube = ({ data }) => {
     );
 };
 
-export default DoosanYoutube;
+export default DSYoutubeUI;

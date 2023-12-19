@@ -1,28 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../assets/css/reset.css'
 import './Main.scss'
-// import dataList from '../assets/api/DoosanData';
-// import statDataMap from '../assets/api/DoosanMap'
 import { Header } from './Header';
-import DoosanList from './DoosanList';
-import DoosanInfo from './DoosanInfo';
+import DSPlayers from './DSPlayers';
+import DSImages from './DSImages';
+import DSMenuUI from './DSMenuUI';
+import { DSInfo } from './DSInfo';
+import DSContent from './DSContent';
+import DSContentContainer from './DSContentContainer';
 
 const Main = () => {
-
-    // CCP 및 SOLID 적용해볼 것
-    // const [statData, setStatData] = useState(ysh53)
-    // const [data, setData] = useState(dataList[0])
-    // const onSelect = (no, noname) => {
-    //     const idx = dataList.findIndex(item => item.no === no);
-    //     setData(dataList[idx])
-    //     setStatData(statDataMap[noname]);
-    // };
     return (
         <>
             <Header>
                 <Header.Logo />
-                <DoosanInfo/>
-                <DoosanList/>
+                <DSPlayers />
+                <DSInfo>
+                    <DSImages />
+                    <DSContentContainer>
+                        <DSMenuUI />
+                        <DSContent />
+                    </DSContentContainer>
+                </DSInfo>
             </Header>
         </>
     );

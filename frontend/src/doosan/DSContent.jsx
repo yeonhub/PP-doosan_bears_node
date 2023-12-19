@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-// import {componentMap} from '../assets/api/DSComponentData'
 import { InfoContext } from './DSInfo'
 
 import DSProfileUI from './DSContentComponet/DSProfileUI';
@@ -17,9 +16,9 @@ const DSContent = () => {
     const Component = componentMap[content] || null;
 
     return (
-        <>
+        <div className='con'>
             {Component && <Component />}
-        </>
+        </div>
     );
 };
 
