@@ -1,20 +1,24 @@
 import React from 'react';
-import DoosanItem from './DoosanItem';
+import { DoosanPlayerData } from '../assets/api/DoosanData';
+import { HeaderContext } from './Header';
 
-const DoosanList = ({ listData, onSelect }) => {
+const DoosanList = ({ children }) => {
+    const onSelect = React.useContext(HeaderContext);
+
     return (
-        <>
-            <ul className='list'>
-                {
-                    listData.map(item => <DoosanItem key={item.id} item={item} onSelect={onSelect} />)
-                }
-            </ul>
-        </>
+        <ul className='list'>
+            {DoosanPlayerData.map(item => (
+                <li key={item.id} data-id={item.id} onClick={() => onSelect(item.no, item.nameno)}>
+                    <img src={item.imgurl} alt={item.name} />
+                    <p>
+                        <em>{item.no}</em>
+                        <strong>{item.position}</strong>
+                    </p>
+                    <span>{item.name}</span>
+                </li>
+            ))}
+        </ul>
     );
 };
-
-const DoosanImg = () => {
-
-}
 
 export default DoosanList;

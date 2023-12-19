@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { HeaderContext } from './Header'
 
-const DoosanImg = ({ data }) => {
-
+const DoosanImg = ({ children }) => {
+    const selectedPlayerData = React.useContext(HeaderContext);
     // 컴포넌트 분리 예상
-    const { images } = data;
+    const images = selectedPlayerData.images
     const [big, setBig] = useState(images[0].tn)
 
     useEffect(() => {
